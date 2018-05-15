@@ -1,0 +1,16 @@
+-- research and development residency 5/5/2018
+-- track 1
+
+d1 $ striate 16 $ sound "{research:4(3,8), research:50(4,7,3)}" # cut 2 # speed 0.5
+
+d2 $ loopAt 4 $ chop 32 $ sound "[research:4, research:1]" # gain 0.90 # speed 0.5 # room 0.0
+
+d5 $ sound "glitch:2*8" # gain (every 3 (rev) $ "1 0.8 0.5 0.7") # room 0.2
+
+d3 $ slow 2 $ sometimes (|*| up (choose[2,3,(-3),9,(-2)]))$ every 3 (iter 4)$ every 6 (twist 0.50 0.75 16)$ n "{1 32 3 16 18 40 49 10, 20 230 49 43}" # sound "research" # cut 2 # gain 1.1 # speed 0.5
+d4 $ silence
+
+d4 $ every 3 (|*| up (choose[2,3,(-3),9,(-2)])) $ sometimes (slow 2)$ dip $ whenmod 8 6 (const $ sound "[feel:6([4 7 5]/3,8,3), feel:5(5,8,4), ~ cp*2? ~ ~]") $ sound "~ ~ ~ ~" # coarse "4" # gain 0.95
+
+
+d1 $ striate 4 $ slow 8 $ sound "[research:3,research:4]" # speed 0.5 # gain 1.1 # room 0.2 # coarse 8

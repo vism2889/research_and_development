@@ -1,0 +1,10 @@
+-- Midi imports
+import Sound.Tidal.MIDI.Context
+import Sound.Tidal.MIDI.CC
+import Sound.Tidal.MIDI.Stream
+import Sound.Tidal.MIDI.Synth
+
+devs <- midiDevices
+
+mySynth <- midiStream devs "Scarlett 2i4 USB" 1 synthController
+mySynth3 <- midiStream devs "Scarlett 2i4 USB" 3 synthController

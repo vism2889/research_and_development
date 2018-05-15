@@ -1,0 +1,11 @@
+-- research and development residency 5/5/2018
+-- track 3
+
+d1 $ pop4 0.125 1.2$ fuk $ sound "[research:19(5,8),bd(3,8)]" # gain 1.4
+d2 $ whenmod 16 8 (pop4 0.125 0.7)$ loopAt 4 $ sound "research:55" # gain 1.75 # speed 0.75
+d3 $ sound "research:56" # gain 1.25 # speed 0.7 # cut 2
+d4 $ n "[2(3,8)?]" # sound "glitch"
+d5 $whenmod 16 12 ( const $ every 5 (stut 8 0.75 0.5)$ every 6 (iter 4)$ sound "[noiz:4/4,<feel:6(3,8) feel:5*3 feel:5(5,8)>]" # coarse (run 8)) $ sound "~ ~ ~ ~"
+
+
+d1 $ pop3 0.125 1.7 $ dip $ sound "rot:3 rot:1 rot:2"
