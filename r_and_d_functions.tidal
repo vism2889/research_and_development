@@ -1,0 +1,8 @@
+-- Functions used for for content made at R&D
+-- Other functions you may notice that aren't in the standard library can be found in the 1000tidalpatterns repo
+
+let filler p = every 3 (within (0.0, 0.50)(slow 2 . rev . stut 8 0.95 0.25)) $ every 7 (within (0.5, 0.75)(stut 4 0.95 0.25)) $ someCyclesBy 0.125 (within (0.75, 1.0)(striate 32)) p
+    maven a b c p = stut' 4(a) (|*| room b ) $ stut' 4(1) (|*| speed c ) p
+    realAF p = every 3 (slow 2) $ someCyclesBy 0.125 (stut 8 0.95 0.25) $ every 16 (within (0.5,0.75)(slow 4 . striate 16)) p
+
+d1 $ realAF $ slow 2 $ lips $ sound "[hh*4,bd([7 4 3]/3,8,7)?]"
