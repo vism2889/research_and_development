@@ -1,9 +1,10 @@
 # research_and_developement
-### Tidal code from artist residency with Matthew Gallagher at his studio Research &amp; Development
+### Tidal code from artist residency with Matthew Gallagher and Marcia Custer at their studio Research &amp; Development in downtown Cleveland Ohio.
 
 
 Spring Residency
 
+Proposal:
 Coming from a more recent self-taught background in electronics and programming,
 mainly purposed for crafting audio software and instruments, and a formal background in
 percussion and ceramic art, I have recently sought the assistance of an academic setting to help
@@ -18,3 +19,6 @@ concepts pertaining to my academic field of study. Specific processes I hope to 
 during this residency are: field-recording, sound design, DSP-scripting, livecoding, and 3D
 graphic design. In addition to the aforementioned inspiration, I hope to also make a deep
 connection with the space provided, experiences of surrounding city life, and my loving hosts.
+
+
+More information about [R&D](https://www.matthew-gallagher.com/rd.html)
