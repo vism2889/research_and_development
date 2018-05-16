@@ -41,7 +41,7 @@ d1 $ every 6 (stut 8 0.75 0.5)$ seqPLoop [
 
 
 
-
+d1 $ $ slow 4 $ striate 16 $ sound "research:11 research:9 research:8 research:7" # gain 0.5
 
 
 
@@ -57,12 +57,12 @@ d1 $ sound "{bd hh sn cp, arpy bass2 drum notes can}" -- 5 played over the 4 bea
 
 -- Sometimes you might want to create an odd polymeter rhythm without having to explicitly create a base rhythm.
 -- You could do this with rests:
-d1 $ sound "{~ ~ ~ ~, arpy bass2 drum notes can}"
+d1 $ sound "{~ ~ ~ ~, noiz:2 bass drum notes hh}"
 
 d1 $ every 12 (const $ sound "bd*4 sn*2") $ sound "bd sn bass2 sn" -- const used with every instead of whenmod
 
 d1 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
-   # speed ((*2) <$> sine)
+   # speed ((*2) <$> sine) # gain 1.5
 -- The above applies the function (* 2) (which simply means multiply by two),
 -- to all the values inside the sine pattern.
 

@@ -1,0 +1,19 @@
+-- research and development residency 5/16/2018
+-- track 6
+
+
+d1 $ every 6 (striate 16) $ chop 16 $ sound "research" # n "4" # speed 0.7 # room 0.5 # cut 2 # gain 0.75
+
+d2 $ every 16 (within(0.5,1.0)(maven 0.25 3 0.2))$ fuk $whenmod 8 4 (const $ sound "[glitch:2([5 4 [7 4]]/5,8,3), glitch:5(3,8)]")$ sound "[glitch:2([5 4 [7 4]]/5,8,3), glitch:5(3,8)]" # cut 2
+
+d3 $whenmod 16 8 (const $ fuk $ sound " feel:6([4 3 7 [5 7]]3,8,5)" # cut 2)$ fuk $ sound " feel:6([4 3 7 [5 7]]3,8,5)" # cut 2
+
+d4 $ whenmod 32 16 (const $ pop4 0.125 1.5 $ sound "stab:1" # gain 0.75)$ sound "~ ~ ~ ~" # gain 0.85 
+
+d5 $ realAF $ every 3 (twist 0.75 1.0 16) $ sound "[trp:4([5 4]/3,8,7),~ ~ trp:1/2 ~,]" # gain 0.75
+
+d6 $ every 6 (fast 2)$ sound "hh*8" # gain (every 3 (rev) $ "1 0.8 0.5 0.7 1 1 0.8 0.8")
+
+d3 $ silence
+
+d7 $ verbPat # sound "rm*4" # gain 0.65
