@@ -1,0 +1,14 @@
+-- research and development residency 5/16/2018
+-- track 7
+
+
+bps (175/60)
+d1 $ whenmod 16 8 (|=| speed (choose[1.2]))$ n "[1(3,8)? ,<90([5 7 4]/3,8) 88 91([7 4 5]/5,8)? 92>]" # sound "research" # speed 0.7 # cut 2
+
+d2 $ whenmod 14 7 (const $ sound "basst:5(3,8)?" # gain 0.95 # cut 3)$ sound "basst:5/1.5" # gain 0.95 # cut 3
+d3 $ whenmod 5 4 (# speed "1.7 2.5 0.5 1.3")$ every 4 (# coarse (run 8)) $ sound "feel:5([5 7 4]/3,8)" # gain 0.75
+
+
+d4 $ foldEvery [2,3,5](const $ every 8 (pop4 0.125 2.8)$ every 6 (twist 0.85 1.0 16)$ every 13 (twist 0.25 0.5 16)$ whenmod 20 14 (# speed "1.7")$ sometimes (iter 4)$ n "[1([4 5 7]/3,8), 2? ,3/3 4*2,<3 5(3,8) 6 7(5,8)>]" # sound "[amencutup,feel]" # gain 0.85  # release 0.1) $ sound "[feel:6 ~ trp:3/2 ~,feel:2([3 4 5 7]/3,8)?]" # speed 0.6
+
+d5 $ silence
