@@ -1,6 +1,9 @@
 # research_and_developement
-### Tidal code from artist residency with Matthew Gallagher and Marcia Custer at their studio Research &amp; Development in downtown Cleveland Ohio.
+### Code from artist residency with Matthew Gallagher and Marcia Custer at their studio Research &amp; Development in downtown Cleveland Ohio.
 
+## Resources
+- [Tidalcycles](https://github.com/tidalcycles)
+- [Pyo](https://github.com/belangeo/pyo)
 
 Spring Residency
 
