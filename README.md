@@ -5,9 +5,8 @@
 - [Tidalcycles](https://github.com/tidalcycles)
 - [Pyo](https://github.com/belangeo/pyo)
 
-Spring Residency
 
-Proposal:
+#### Proposal:
 Coming from a more recent self-taught background in electronics and programming,
 mainly purposed for crafting audio software and instruments, and a formal background in
 percussion and ceramic art, I have recently sought the assistance of an academic setting to help
