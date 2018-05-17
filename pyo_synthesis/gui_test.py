@@ -6,13 +6,13 @@ Will look into this problem more in the future.
 '''
 
 '''
-weird FM synth with pyo as an initial go about!
+weird FM synth with pyo, initial go about!
 TODO:
 - Implement midi + midi-learn
 - Implement better paramter control
 - Implement Audio in from .wav file
 
-
+- Long term: Small full featured synth in python, with gui for selecting supported midi/osc/audio routing
 '''
 
 from pyo import *
