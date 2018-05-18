@@ -1,3 +1,4 @@
+# Work in progress 
 from pyo import *
 POLY = 10
 
