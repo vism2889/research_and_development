@@ -1,18 +1,20 @@
 -- research and development residency 5/16/2018
 -- track 10
+-- can be listened to here: https://soundcloud.com/morgantics/r_and_d_10
 
 bps(190/60)
 
-d1 $ realAF $ every 6 (twist 0.25 1.0 16)$ gain "1.0 0.8 0.75 0.5 1.0 0.80 0.75 0.25" # sound "hh" # gain 1.2
+d1 $ slow 4 $ realAF $ every 6 (twist 0.25 1.0 16)$ gain "1.0 0.8 0.75 0.5 1.0 0.80 0.75 0.25" # sound "hh" # gain 1.2
+d3 $ silence
 
 d3 $ fuk $ sound "ul:8([7 3 5]3,8)?"
 
-d4 $ fuk $ every 16 (striate 4)$ every 3 (slow 2)$ realAF $ foldEvery [2,3,5](const $ every 8 (pop4 0.125 2.8)$ every 6 (twist 0.85 1.0 16)
+d4  $ dip $ fuk $ every 16 (striate 4)$ every 3 (slow 2)$ realAF $ foldEvery [2,3,5](const $ every 8 (pop4 0.125 2.8)$ every 6 (twist 0.85 1.0 16)
   $ every 13 (twist 0.25 0.5 16)$ whenmod 20 14 (# speed "1.7")$ sometimes (iter 4)
   $ n "[1([4 5 7]/3,8), 2? ,3/3 5*2,<3 5(3,8) 6 7(5,8)>]" # sound "[amencutup,feel]" # gain 1.15  # release 0.1)
   $ sound "[feel:5 ~ trp:6/2 ~,feel:2([3 4 5 7]/3,8)?]" # speed 0.6 # gain 1.5 # speed 1.7
 
-d6 $whenmod 16 8 (const $ loopAt 8 $chop 32$ sound "guitarloop:8" # gain 1.2 # speed 1.7)
+d6 $ dip $whenmod 16 8 (const $ loopAt 8 $chop 32$ sound "guitarloop:8" # gain 1.2 # speed 1.2)
     $ loopAt 8 $chop 32$ sound "guitarloop:8" # gain 1.2 # speed 0.7
 
-d6 $ fuk$ sound "[feel:6([7 4 5 3]3,8)?]" # gain 1.1 # cut 2
+d7 $ dip $ slow 2 $ every 6 (twist 0.25 1.0 16)$ fuk$ sound "[feel:6([7 4 5 3]3,8)?]" # gain 1.1 # cut 2

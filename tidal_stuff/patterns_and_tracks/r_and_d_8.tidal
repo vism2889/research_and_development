@@ -1,13 +1,16 @@
 -- research and development residency 5/16/2018
 -- track 8
+-- can be listened to here: https://soundcloud.com/morgantics/r_and_d_8
 
-
-d2 $ sound "[tech([7 4]/5,8),tech:9(3,8),tech:5([3 8]/3,8)]" # gain 1.25
+bps (120/60)
+d2 $ fuk $ realAF $ sound "[tech([7 4]/5,8),tech:9(3,8),tech:5([3 8]/3,8)]" # gain 1.25
+d3 $ silence
 
 d3 $ whenmod 32 26 (slow 4)$ realAF $ every 7 (twist 0.25 0.4 16)$ whenmod 24 16 (iter 4)$ whenmod 16 10 (slow 2)
   $ every 6 (within (0.25,1.0)(striate 4))$ every 6 (twist 0.5 1.0 16)$ pop4 0.25  "17 34"
   $ sound "[uniq:8/5, ul:3(3,8),feel:5([7 4]/5,8)?, feel:7]" # gain 0.75 # speed 0.5
 
-d4 $ speed "1.1/4 1.5/3 1.2/7" # sound "feel:6" # gain 1.0 # release 0.8
+d4 $ realAF $ fuk $ speed "1.1/4 1.5/3 1.2/7 ~" # sound "feel:6" # gain 1.0 # release 0.8
 
-d5 $ realAF $ speed "1.1/4 1.5/3 1.2/7 0.7/5 0.25 0.125 0.0125/6" # sound "research:56"
+
+d5 $ realAF $ speed "1.1/4 1.5/3 1.2/7 0.7/5 0.25 0.125 0.0125/6" # sound "research:56" # speed 0.125 # gain 0.0
