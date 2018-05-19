@@ -1,8 +1,9 @@
 -- research and development residency 5/16/2018
 -- track 8
 
+bps (160/60)
 
-d3 $ realAF $ stack[
+d3 $ every 4 (fast 2)$ realAF $ stack[
 every 7 (twist 0.75 1.0 16)$ seqPLoop [
 (0,8, stack[
   pop4 0.125 1.7 $ sound "research:70/4",
@@ -10,8 +11,20 @@ every 7 (twist 0.75 1.0 16)$ seqPLoop [
 (8,10, sound "[feel:6, trp:3(3,8)]" # gain 0.75),
 (10,16, stack[
   pop4 0.125 1.7 $ sound "research:69/4",
-  sound "ul:6([7 4]/3,8)" # gain 0.75
+  sound "ul:6([7 4]/3,8)" # gain 1.0
   ])
 ],
-sound "[hh([4 7 5]/5,8),feel:8(3,8)]"
+fuk $ sound "[hh([4 7 5]/5,8),feel:8(3,8)]"
 ]
+
+d4 $whenmod 16 8 (filler) $ realAF $ every 7 (twist 0.75 1.0 16)$ fuk $ seqPLoop [
+(0, 4, sound "trp:6(3,8)" # cut 2),
+(4, 6, sound "[bd:6(6,8), ul:5(3,8)]" # cut 2 # speed 1.2),
+(6,14, sound "feel:6([7 5 4]/3,8)" # cut 2),
+(14,16, sound "feel:6([7 4]/5,8)" # cut 2),
+(16,32, every 4 (pop4 0.125 1.7) $ sound "[feel:5(5,8),noiz:8([7 4]/3,8), basst:7(3,8)]")
+] # gain 1.2
+
+d2 $ every 7 (within (0.0, 0.5)( |=| room 0.8))$ loopAt 8 $ chop 16 $ sound "research:95" # gain 1.2 # room 0.0
+
+d5 $whenmod 16 14 (const $ sound "cp([7 5 4 3]/3,8,5)")$ sound "feel:9/2 ~ cp/2 ~" # gain 1.2
