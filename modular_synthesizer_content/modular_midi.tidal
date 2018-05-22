@@ -1,0 +1,93 @@
+-- Midi sequences used to control a small modular synthesizer setup.
+-- Base of this code was originally written for a performance at Oscillate Pittsburgh.
+-- During my time spend with Matt and Marcia, I tried to elaborate on what I was able to do with midi, and CV signals.
+-- 05/22/2018
+
+
+-- Midi imports
+import Sound.Tidal.MIDI.Context
+import Sound.Tidal.MIDI.CC
+import Sound.Tidal.MIDI.Stream
+import Sound.Tidal.MIDI.Synth
+
+devs <- midiDevices
+
+mySynth <- midiStream devs "Scarlett 2i4 USB" 1 synthController
+mySynth3 <- midiStream devs "Scarlett 2i4 USB" 3 synthController
+
+
+do
+  t1 (anticipateIn 4) $ sound " ~ ~ ~ ~"
+  mySynth $ every 6 (twist 0.25 1.0 16)$ (0.045 ~>) $ slowcat [n "[5([5 4 7]/3,8), 4/8, 7([5 6 7]3,8), 8([5 3]/3,8), 2/4]"]
+  mySynth3 $ slow 2 $ whenmod 16 8 (const $ n "3 4 5 67 78 78/3 89/4 3 4 5/4")$ (0.045 ~>)
+    $ n " 3  39 9/4 10 15/3 50 51 53 75 87"
+
+do
+  mySynth $ (0.21 ~>)  $ slow 2$ n "[5(3,8),6(5,8),7([7 3]/3,8), ~ 8 ~ ~]"
+  mySynth3 $ (0.21 ~>) $ iter 4$ slow 2 $ slowcat [n "11(3,8)",
+                                  n "9 ~ 11 ~",
+                                  n "3(3,8)",
+                                  n " 21 35 47 61"]
+
+mySynth3 $ (0.20 ~>) $ n "[9 11 17 21 23 27 35 41]"
+
+
+mySynth3 $ (0.16 ~>) $ slowcat [n "9 11 17 21 23 27 35 41",
+                  n "~ ~ ~ ~ ~ ~ ~ ~",
+                  n "[9 21 35 23]",
+                  iter 4 $ n "9 11 17 21 23 27 35 41",
+                  n " ~ ~ ~ ~",
+                  n " 9 21 35",
+                  n "9 11 ~ 17*2",
+                  n "35(4,7)",
+                  n "33(3,8)",
+                   iter 4 $ n "9 11 17 21 23 27 35 41",
+                  n "~",
+                  n "21(3,8)",
+                  n "9 17 21 27",
+                  n "9 11 17 21 23 27 35 41 45 49 57 68 98",
+                  n "9 17 ~ 11*2",
+                  n "35(4,7)",
+                  n "33(3,8)",
+                  n "[9 21 25 23]",
+                  iter 4 $ n " 9 11 17 21 23 27 35 41"]
+
+do
+  mySynth $ (0.16 ~>)  $ slowcat[ n "2 ~ 6 ~ 6 2 6 ~",
+                                                n "5 5 5 5",
+                                                            n " ~ ~ ~ ~",
+                                                            n " 5 ~ 6 6",
+                                                            n " 7 5 3 7 5 5",
+                                                            n " 5 4 5",
+                                                            n " 6*2 5 7 5",
+                                                            n "[5(4,7)]",
+                                                            n "5(3,8)",
+                                                            iter 4 $ n "5 5 6 5 6*2 6*2 6*2 6*2",
+                                                            n "5 5 ~ ~",
+                                                            iter 4 $ n "7 5 7 7 7 7 5 5",
+                                                            n "2 3 5 4",
+                                                            n "6*13",
+                                                            n "[5(3,8),6(5,8)]",
+                                                            n "5(4,7)",
+                                                            n "5(3,8)",
+                                                            n " 5 ~ 7 ~",
+                                                            n " 8 ~ 5 ~"]
+  mySynth3 $ (0.16 ~>) $ slowcat [n "9 11 17 21 23 27 35 41",
+                    n "~ ~ ~ ~ ~ ~ ~ ~",
+                    n "[9 21 35 23]",
+                    iter 4 $ n "9 11 17 21 23 27 35 41",
+                    n " ~ ~ ~ ~",
+                    n " 9 21 35",
+                    n "9 11 ~ 17*2",
+                    n "35(4,7)",
+                    n "33(3,8)",
+                     iter 4 $ n "9 11 17 21 23 27 35 41",
+                    n "~",
+                    n "21(3,8)",
+                    n "9 17 21 27",
+                    n "9 11 17 21 23 27 35 41 45 49 57 68 98",
+                    n "9 17 ~ 11*2",
+                    n "35(4,7)",
+                    n "33(3,8)",
+                    n "[9 21 25 23]",
+                    iter 4 $ n " 9 11 17 21 23 27 35 41"]
